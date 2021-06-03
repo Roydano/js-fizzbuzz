@@ -42,6 +42,8 @@
 // Generatore di “nomi cognomi” casuali: prendendo una lista di nomi e una lista di cognomi, Gatsby vuole generare una falsa lista di invitati.
 // p.s potete scegliere se farne 4/5 oppure generarli all'infinito fino a quando non vi stufate.
 
+//RISOLUZIONE ESERCIZIO
+
 // var nomi = ['Danilo', 'Davide', 'Nicola', 'Michele', 'Paolo', 'Emanuele', 'Armand', 'Beatrice', 'Maria', 'Emma', 'Ginevra'];
 
 // var cognomi = ['Rossi', 'Ferrari', 'Russo', 'Bianchi', 'Gallo', 'Costa', 'Fontana'];
@@ -73,25 +75,50 @@
 
 // 1 - STAMPARE I NUMERI DA 1 A 100
 
+// METODO 1
+
+// for(var i = 1; i <= 100; i++){
+
+//     //se sono sia multipli di 5 che di 3 scriviamo FizzBuzz
+//     if(i % 3 == 0 & i % 5 == 0){
+//         console.log(i + ' ' + 'FizzBuzz');
+//     }
+
+//     // se sono multipli di 3 scriviamo Fizz
+//     else if(i % 3 == 0){
+//         console.log(i + ' ' + 'Fizz');
+//     }
+
+//     //se sono multipli di 5 scriviamo Buzz
+//     else if(i % 5 == 0){
+//         console.log(i + ' ' + 'Buzz');
+//     }
+
+//     //altrimenti scriviamo solo il numero
+//     else{
+//         console.log(i);
+//     }
+// }
+
+
+
+// METODO 2
+var numero;
+
 for(var i = 1; i <= 100; i++){
+   if(i % 3 == 0 && i % 5 == 0){
+       numero = i + ' ' + 'FizzBuzz';
+   } else if(i % 3 != 0 & i % 5 != 0){
+       numero = i;
+   } else if(i % 5 == 0){
+       numero = i + ' ' + 'Buzz';
+   }else{
+       numero = i + ' ' + 'Fizz';
+   }
 
-    //se sono sia multipli di 5 che di 3 scriviamo FizzBuzz
-    if(i % 3 == 0 & i % 5 == 0){
-        console.log(i + ' ' + 'FizzBuzz');
-    }
 
-    // se sono multipli di 3 scriviamo Fizz
-    else if(i % 3 == 0){
-        console.log(i + ' ' + 'Fizz');
-    }
-
-    //se sono multipli di 5 scriviamo Buzz
-    else if(i % 5 == 0){
-        console.log(i + ' ' + 'Buzz');
-    }
-
-    //altrimenti scriviamo solo il numero
-    else{
-        console.log(i);
-    }
+   console.log(numero);
 }
+
+
+
