@@ -103,22 +103,44 @@
 
 
 // METODO 2
+// var numero;
+
+// for(var i = 1; i <= 100; i++){
+//    if(i % 3 == 0 && i % 5 == 0){
+//        numero = i + ' ' + 'FizzBuzz';
+//    } else if(i % 3 != 0 && i % 5 != 0){
+//        numero = i;
+//    } else if(i % 5 == 0){
+//        numero = i + ' ' + 'Buzz';
+//    } else{
+//        numero = i + ' ' + 'Fizz';
+//    }
+
+
+//    console.log(numero);
+// }
+
+
+// METODO 3
+
 var numero;
 
 for(var i = 1; i <= 100; i++){
-   if(i % 3 == 0 && i % 5 == 0){
-       numero = i + ' ' + 'FizzBuzz';
-   } else if(i % 3 != 0 & i % 5 != 0){
-       numero = i;
-   } else if(i % 5 == 0){
-       numero = i + ' ' + 'Buzz';
-   }else{
-       numero = i + ' ' + 'Fizz';
-   }
+    
+    numero = '';
 
+    if(i % 3 == 0){
+        numero = 'Fizz';
+    }
+    if(i % 5 == 0){
+        numero += 'Buzz';
+    }
+    if(i % 6 == 0){
+        numero += 'Boolean';
+    }
+    if(i % 3 != 0 && i % 5 != 0 && i % 6 != 0){
+        numero = '';
+    }
 
-   console.log(numero);
+    console.log(i + ' ' + numero);
 }
-
-
-
